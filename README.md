@@ -34,7 +34,7 @@
 
 ## 安装
 ```bash
-composer require lyndon/xiongzhang-sdk
+composer require lyndon1994/xiongzhang-sdk
 ```
 
 ## 使用
