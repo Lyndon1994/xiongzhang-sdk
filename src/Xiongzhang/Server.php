@@ -113,9 +113,8 @@ class Server
             self::$log->notice("GET:" . json_encode($params));
 
             // 校验请求来自xzh server有效性，验证通过返回 echostr
-            $echoStr = $_GET["echostr"];
-            if (isset($echoStr) && $this->checkXzhServerSign()) {
-                die($echoStr);
+            if (isset($_GET["echostr"]) && $this->checkXzhServerSign()) {
+                die($_GET["echostr"]);
             } else {
                 die('no access');
             }

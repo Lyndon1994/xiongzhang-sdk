@@ -114,3 +114,45 @@ switch ($msgType) {
         $xzhLib->text(SdkConfig::REV_SUCCESS_REPLY)->reply();
 }
 ```
+
+### 框架支持
+
+#### Laravel
+##### 配置
+###### Laravel 应用
+1. 注册 ServiceProvider:
+    ```php
+    Xiongzhang\Laravel\XiongzhangServiceProvider::class,
+    ```
+2. ENV 中支持以下配置：
+```yaml
+# client_id
+XZH_CLIENTID
+# client_secret
+XZH_CLIENTSECRET
+# token
+XZH_TOKEN
+# aes_key
+XZH_AES_KEY
+# 熊掌号消息格式类型，默认xml
+XZH_PACK_TYPE
+
+# 输出日志等级，默认debug
+XZH_LOG_LEVEL
+# 输出日志路径，默认/storage/logs/xzh.log
+XZH_LOG_FILE
+```
+
+###### Lumen 应用
+1. 在 bootstrap/app.php 中 82 行左右：
+    ```php
+    $app->register(Overtrue\LaravelWechat\ServiceProvider::class);
+    ```
+2. ENV 中支持以下配置：同Laravel应用
+
+##### 使用
+1. 获取服务实例：
+    ```php
+    $xzhLib = app('xiongzhang');
+    ```
+2. 接下来的使用如同上面的示例。
