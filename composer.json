@@ -18,12 +18,23 @@
     },
     "autoload": {
         "psr-4": {
-            "Xiongzhang\\": "src/"
+            "Xiongzhang\\": "src/Xiongzhang"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Xiongzhang\\": "tests/"
+            "Xiongzhang\\": "tests/Xiongzhang"
+        }
+    },
+    "minimum-stability" : "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xiongzhang\\Laravel\\XiongzhangServiceProvider"
+            ],
+            "aliases": {
+                "Xiongzhang": "Xiongzhang\\Laravel\\Facade"
+            }
         }
     }
 }
