@@ -146,7 +146,7 @@ XZH_LOG_FILE
 ###### Lumen 应用
 1. 在 bootstrap/app.php 中 82 行左右：
     ```php
-    $app->register(Overtrue\LaravelWechat\ServiceProvider::class);
+    $app->register(Xiongzhang\Laravel\XiongzhangServiceProvider::class);
     ```
 2. ENV 中支持以下配置：同Laravel应用
 
