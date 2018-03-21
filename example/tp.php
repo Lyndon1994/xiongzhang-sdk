@@ -31,7 +31,7 @@ $init = array(
 $tpLib = Server::init($init);
 $infoType = $tpLib->getRevType();
 $infoData = $tpLib->getRevData();
-$xzhLib::$log->notice("Rev msgType: {$msgType} msgData:" . json_encode($msgData));
+$tpLib::$log->notice("Rev msgType: {$infoType} msgData:" . json_encode($infoData));
 
 // 根据消息类型，做业务响应
 switch($infoType) {
